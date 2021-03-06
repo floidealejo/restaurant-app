@@ -5,13 +5,14 @@ const database = firebase.firestore(firebaseApp);
 
 export const isUserLogged = () => {
   let isLogged = false;
-  firebase.auth.onAuthStateChanged((user) => {
+  firebase.auth().onAuthStateChanged((user) => {
     if (user !== null) {
-      return (isLogged = false);
+      isLogged = false;
     } else {
-      return (isLogged = true);
+      isLogged = true;
     }
   });
+  return isLogged;
 };
 
 export const getCurrentUser = () => {
