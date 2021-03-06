@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#442484",
-    marginTop:10
+    marginTop: 10,
   },
 });
